@@ -1,0 +1,16 @@
+language: node_js
+node_js:
+  - "node"
+matrix:
+  include:
+  - name: "ЗАДАЧА 1"
+    env: $TASK=test1
+  - name: "ЗАДАЧА 2"
+    env: $TASK=test2
+  - name: "ЗАДАЧА 3"
+    env: $TASK=test3
+  - name: "ЗАДАЧА 4"
+    env: $TASK=test4
+  - name: "ЗАДАЧА 5"
+    env: $TASK=test5
+script: "mocha test/$TASK.js"
