@@ -1,4 +1,4 @@
-"use strict"
+"use strict"                       
 
 const assert = require('assert');
 const fs = require('fs');
@@ -11,7 +11,7 @@ describe('ЗАДАЧА 1: функция numDots', function(){
 	it('файл непуст', function(){
 		var stats = fs.statSync('L05-01.js');
 		var fileSize = stats["size"];
-		assert(fileSize > 0, "Файл пуст");
+		assert(fileSize > 24, "Файл пуст или слишком маленький");
 	});
 
 	const numDots = require('../L05-01.js');
