@@ -4,13 +4,13 @@ node_js:
 matrix:
   include:
   - name: "ЗАДАЧА 1"
-    env: $TASK=test1
+    env: $TASK=1
   - name: "ЗАДАЧА 2"
-    env: $TASK=test2
+    env: $TASK=2
   - name: "ЗАДАЧА 3"
-    env: $TASK=test3
+    env: $TASK=3
   - name: "ЗАДАЧА 4"
-    env: $TASK=test4
+    env: $TASK=4
   - name: "ЗАДАЧА 5"
-    env: $TASK=test5
-script: "mocha test/$TASK.js"
+    env: $TASK=5
+script: "mocha test/smalltest0$TASK.js test/test0$TASK.js"
