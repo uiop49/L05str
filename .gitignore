@@ -2,3 +2,9 @@
 text/
 node_modules/
 package-lock.json
+text/*.aux
+text/*.synctex.gz
+text/*.xdv
+text/*.log
+text/*.fdb_latexmk
+text/*.fls
