@@ -1,0 +1,57 @@
+%!TEX program = xelatex
+\documentclass{article}
+\usepackage[a5paper,hmargin=17mm,tmargin=15mm,bmargin=25mm]{geometry}
+
+\usepackage{ifxetex}
+\ifxetex
+ \usepackage{fontspec}
+ \setmainfont[Scale=1.1]{Arno Pro}
+ \setmonofont[Scale=.92]{Consolas}
+ \usepackage{unicode-math}              %% пакет для загрузки шрифтов математического режима 
+ \setmathfont{[latinmodern-math.otf]}
+ \setmathfont[range=\mathit/{latin,Latin}]{Arno Pro Italic}
+ \setmathfont[range=up]{Arno Pro}
+ \setmathfont[range=\mathup/{latin,Latin}]{Arno Pro}
+\else
+ \usepackage[utf8]{inputenc}
+\fi
+\usepackage[russian]{babel}
+\usepackage{enumitem}
+
+
+\begin{document}
+\abovedisplayskip=5pt
+\belowdisplayskip=3pt
+\sloppy
+
+\section*{{\normalsize Лабораторная работа 5} \\Строки}
+
+Цель этой лабораторной работы~--- изучить понятие строки и научиться работать с ними при помощи циклов в JavaScript. 
+
+\bigskip
+\noindent\textbf{ВНИМАНИЕ! Файлы называть \texttt{L05-01.js} и т.\,д. Методы строковых объектов не использовать. Не забудьте экспортировать вашу функцию:}\newline
+\centerline{\texttt{module.exports = numDots;} \textbf{и т. п.}}
+
+\begin{enumerate}
+\item
+Напишите функцию \texttt{numDots(s)}, которая возвращает число точек в~строке \texttt{s}.
+Например, \texttt{numDots('.x.')} дает \texttt{2}.
+\item
+Напишите функцию \texttt{ph2f(s)} которая принимает строку \texttt{s} и возвращает результат замены всех вхождений подстроки \texttt{ph} в нее на \texttt{f}. Например, \texttt{ph2f('photographer')} дает \texttt{'fotografer'}.
+\item
+Напишите функцию \texttt{longestWordLen(s)}, которая дает длину самого длинного слова в строке. Словом считать любую последовательность латинских букв. Например, 
+$$
+\texttt{longestWord('Quick brown fox jumps, and is gone.')}
+$$ 
+дает \texttt{5}.
+\item
+Напишите функцию \texttt{isPalindrome(s)}, которая принимает строку \texttt{s}, состоящую из одних только латинских заглавных букв и пробелов, и возвращает \texttt{true}, если она является палиндромом (читается одинаково слева направо без учета пробелов), и \texttt{false} в противном случае. Например, \texttt{isPalindrome('MADAM I M ADAM')} дает \texttt{true}.  Число действий должно быть пропорционально длине \texttt{s}.
+\item
+Напишите функцию \texttt{isDelResult(s1, s2)}, которая принимает две строки, и дает \texttt{true}, если \texttt{s2} можно получить из \texttt{s1} удалением некоторых символов, и \texttt{false} в противном случае. Например, 
+$$
+\texttt{isDelResult('ALABAMA',}{~}\texttt{'ALMA')}
+$$
+дает \texttt{true}. Число действий должно быть пропорционально суммарной длине двух строк.
+\end{enumerate}
+
+\end{document}
