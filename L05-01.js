@@ -4,3 +4,5 @@ function numDots(s) {
 		if (s[i]=='.') dotCount++;
 	return dotCount;
 } 
+
+module.exports = numDots;
