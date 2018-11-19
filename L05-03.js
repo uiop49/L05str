@@ -11,5 +11,5 @@ var maxCount = 0;
 		}
 	}
 	return maxCount;
-} 
+}
 module.exports = longestWordLen;
