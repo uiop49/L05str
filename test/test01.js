@@ -19,5 +19,31 @@ describe('ЗАДАЧА 1: функция numDots', function(){
            assert.strictEqual(numDots(".*."), 2, "неверно для '.*.'");
         });
 
+	it('дает 4 для строки с 4 точками "./././.*@^#&*!@"', function(){
+           const numDots = require('../L05-01.js');
+           assert.strictEqual(numDots("./././.*@^#&*!@"), 4, "неверно для './././.*@^#&*!@'");
+        });
+
+	it('дает  для строки с 3 точками "Глушков.Валерий..Юрьевич,!"', function(){
+           const numDots = require('../L05-01.js');
+           assert.strictEqual(numDots("Глушков.Валерий..Юрьевич,!"), 3, "неверно для 'Глушков.Валерий..Юрьевич,!'");
+        });
+
+	it('дает 0 для пустой строки ""', function(){
+           const numDots = require('../L05-01.js');
+           assert.strictEqual(numDots(""), 0, "неверно для ''");
+        });
+
+	it('дает 0 для пустой строки с пробелом " "', function(){
+           const numDots = require('../L05-01.js');
+           assert.strictEqual(numDots(" "), 0, "неверно для ' '");
+        });
+
+	it('дает 0 для  строки без точек "Меня зовут Валерий "', function(){
+           const numDots = require('../L05-01.js');
+           assert.strictEqual(numDots("Меня зовут Валерий "), 0, "неверно для 'Меня зовут Валерий '");
+        });
+
+
 });
  
