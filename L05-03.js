@@ -1,7 +1,7 @@
 function longestWordLen(s) {
 var maxCount = 0;
 	symbolCount = 0;	
-	for (i = 0; i < s.length; i++) {
+	for (i = 0; i < s.length+1; i++) {
 		if (s[i] >= 'a' && s[i] <= 'z' || s[i] >= 'A' && s[i] <= 'Z')
 			symbolCount++;
 		else {
@@ -10,10 +10,6 @@ var maxCount = 0;
 			symbolCount = 0;
 		}
 	}
-if (maxCount != 0)
 	return maxCount;
-else
-	return symbolCount;
 } 
-
 module.exports = longestWordLen;
