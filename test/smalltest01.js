@@ -16,7 +16,7 @@ describe('ЗАДАЧА 1: функция numDots', function(){
 
 	it('дает 2 для строки с 2 точками', function(){
            const numDots = require('../L05-01.js');
-           assertStrictEqual(numDots(".*.")==2, "неверно для '.*.'");
+           assert.strictEqual(numDots(".*.")==2, "неверно для '.*.'");
         });
 
 });
