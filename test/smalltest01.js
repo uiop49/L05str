@@ -24,6 +24,7 @@ describe('ЗАДАЧА 1: функция numDots', function(){
 	it('дает 0 для строки без точек', function(){
 		assert.strictEqual(
 		   numDots('строка без точек'), 0, "неверно для 'строка без точек'");
+
         });
 			
 });
