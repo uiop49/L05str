@@ -25,7 +25,7 @@ describe('ЗАДАЧА 5: функция isDelResult', function(){
 	});
 	
 	it('дает истину для обычной строки и пустой строки', function(){
-		assert.strictEqual(isDelResult("Stone", ""), false, "неверно для 'Stone', ''");
+		assert.strictEqual(isDelResult("Stone", ""), true, "неверно для 'Stone', ''");
 	});
 	
 	it('дает истину для пары строк, включая пробелы', function(){
