@@ -13,10 +13,11 @@ describe('ЗАДАЧА 5: функция isDelResult', function(){
 		var fileSize = stats["size"];
 		assert(fileSize > 24, "Файл пуст или слишком маленький");
 	});
-
-	it('дает истину для пары ALABAMA, ALMA', function(){
-		const isDelResult = require('../L05-05.js');
-		assertStrictEqual(isDelResult("ALABAMA", "ALMA"), true, "неверно для 'ALABAMA', 'ALMA'");
+	
+	const isDelResult = require('../L05-05.js');
+	
+	it('дает истину для пары дефолтной пары', function(){
+		assert.strictEqual(isDelResult("ALABAMA", "ALMA"), true, "неверно для 'ALABAMA', 'ALMA'");
 	});
-
+	
 });

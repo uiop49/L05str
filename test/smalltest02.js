@@ -14,9 +14,11 @@ describe('ЗАДАЧА 2: функция ph2f', function(){
 		assert(fileSize > 24, "Файл пуст или слишком маленький");
 	});
 
-	it('дает верный ответ для строки с 2 вхождениями ph', function(){
-           const ph2f = require('../L05-02.js');
-           assert(ph2f("photographer"), "fotografer", "неверно для 'photographer'");
+	const ph2f = require('../L05-02.js');
+	
+	it('дает верный ответ для строки с 2 вхождениями ph', function(){   
+    		assert.strictEqual(ph2f("photographer"), "fotografer", "неверно для 'photographer'");
         });
-
+		
 });
+ 

@@ -1,4 +1,4 @@
-"use strict"                       
+ "use strict"                       
 
 const assert = require('assert');
 const fs = require('fs');
@@ -13,10 +13,18 @@ describe('ЗАДАЧА 1: функция numDots', function(){
 		var fileSize = stats["size"];
 		assert(fileSize > 24, "Файл пуст или слишком маленький");
 	});
-
-	it('дает 2 для строки с 2 точками', function(){
-           const numDots = require('../L05-01.js');
-           assertStrictEqual(numDots(".*.")==2, "неверно для '.*.'");
+	
+	const numDots = require('../L05-01.js');
+	
+	it('дает 0 для пустой строки', function(){
+		assert.strictEqual(
+			numDots(''), 0, "неверно для ''");
+	});
+	
+	it('дает 0 для строки без точек', function(){
+		assert.strictEqual(
+		   numDots('строка без точек'), 0, "неверно для 'строка без точек'");
         });
-
+			
 });
+ 

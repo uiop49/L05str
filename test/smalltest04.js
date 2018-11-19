@@ -13,15 +13,15 @@ describe('ЗАДАЧА 4: функция isPalindrome', function(){
 		var fileSize = stats["size"];
 		assert(fileSize > 24, "Файл пуст или слишком маленький");
 	});
+	
+	const isPalindrome = require('../L05-04.js');
 
 	it('дает истину для одного палиндрома', function(){
-		const isPalindrome = require('../L05-04.js');
-		assertStrictEqual(isPalindrome("MADAM I AM ADAM"), true, "неверно для 'MADAM I AM ADAM'");
+		assert.strictEqual(isPalindrome("MADAM I M ADAM"), true, "неверно для 'MADAM I M ADAM'");
 	});
-
-	it('дает ложь для одного непалиндрома', function(){
-		const isPalindrome = require('../L05-04.js');
-		assertStrictEqual(isPalindrome("MADA"), false, "неверно для 'MADA'");
+	
+	it('дает истину для одного палиндром с несколькими подряд идущими пробелами', function(){
+		assert.strictEqual(isPalindrome("MADAM I M    ADAM"), true, "неверно для 'MADAM I M    ADAM'");
 	});
  
-});
+}); 

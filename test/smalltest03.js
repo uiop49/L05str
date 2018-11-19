@@ -14,9 +14,10 @@ describe('ЗАДАЧА 3: функция longestWordLen', function(){
 		assert(fileSize > 24, "Файл пуст или слишком маленький");
 	});
 
-	it('Правильно находит длину 1 слова', function(){
-		const longestWordLen = require('../L05-03.js');
-		assertStrictEqual(longestWordLen("Quick"), 5, "неверно для слова 'Quick'");
+	const longestWordLen = require('../L05-03.js');
+	
+	it('Правильно находит длину в пустой строке', function(){	
+		assert.strictEqual(longestWordLen(""), 0, "неверно для слова 'Quick'");
 	});
-
+	
 });
