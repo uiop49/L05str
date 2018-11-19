@@ -16,7 +16,7 @@ describe('ЗАДАЧА 3: функция longestWordLen', function(){
 
 	it('Правильно находит длину 1 слова', function(){
 		const longestWordLen = require('../L05-03.js');
-		assertStrictEqual(longestWordLen("Quick"), 5, "неверно для слова 'Quick'");
+		assert.strictEqual(longestWordLen("Quick"), 5, "неверно для слова 'Quick'");
 	});
 
 });

@@ -18,21 +18,26 @@ describe('ЗАДАЧА 4: функция isPalindrome', function(){
 
 	it('Правильно находит палиндром для строки "MADAM I M ADAM"', function(){
 		const longestWordLen = require('../L05-04.js');
-		assert.strictEqual(isPalindrome("MADAM I M ADAM"), true, "неверно для слова 'Quick'");
+		assert.strictEqual(isPalindrome("MADAM I M ADAM"), true, "неверно для слова 'MADAM I M ADAM'");
 	});
 
 	it('Правильно находит палиндром для строки: "MADAM I "', function(){
 		const longestWordLen = require('../L05-04.js');
-		assert.strictEqual(isPalindrome("MADAM I "), false, "неверно для слова 'Quick'");
+		assert.strictEqual(isPalindrome("MADAM I "), false, "неверно для слова 'MADAM I'");
 	});
 
 	it('Правильно находит палиндром для строки: " "', function(){
 		const longestWordLen = require('../L05-04.js');
-		assert.strictEqual(isPalindrome(" "), true, "неверно для слова 'Quick'");
+		assert.strictEqual(isPalindrome(" "), true, "неверно для строки ' '");
 	});
 
 	it('Правильно находит палиндром для строки: "ALA ALA ALA"', function(){
 		const longestWordLen = require('../L05-04.js');
-		assert.strictEqual(isPalindrome("ALA ALA ALA"), true, "неверно для слова 'Quick'");
+		assert.strictEqual(isPalindrome("ALA ALA ALA"), true, "неверно для слов 'ALA ALA ALA'");
+	});
+
+	it('Правильно находит палиндром для строки: "МVOLAMALI"', function(){
+		const longestWordLen = require('../L05-04.js');
+		assert.strictEqual(isPalindrome("МVOLAMALI"), false, "неверно для слова 'МVOLAMALI'");
 	});
 });  
