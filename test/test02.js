@@ -20,10 +20,10 @@ describe('ЗАДАЧА 2: функция ph2f', function(){
         });
         it('дает верный ответ для строки без ph', function(){
             const ph2f = require('../L05-02.js');
-            assert(ph2f("EGOR"), "EGOR", "неверно для 'photographer'");
+            assert(ph2f("EGOR"), "EGOR", "неверно для 'EGOR'");
          });
          	it('дает верный ответ для строки , состоящей из ph', function(){
             const ph2f = require('../L05-02.js');
-            assert(ph2f("phphphph"), "ffff", "неверно для 'photographer'");
+            assert(ph2f("phphphph"), "ffff", "неверно для 'phphphph'");
          });
 });
