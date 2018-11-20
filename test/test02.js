@@ -19,5 +19,14 @@ describe('ЗАДАЧА 2: функция ph2f', function(){
            assert(ph2f("photographer"), "fotografer", "неверно для 'photographer'");
         });
 
+	it('дает верный ответ без пустой строки', function(){
+           const ph2f = require('../L05-02.js');
+           assert(ph2f("photographer"), "fotografer", "неверно для пустой строки");
+        });
+
+	it('дает верный ответ для строки без ph', function(){
+           const ph2f = require('../L05-02.js');
+           assert(ph2f("photographer"), "fotografer", "неверно для строки без ph");
+        });
 });
  
