@@ -21,12 +21,12 @@ describe('ЗАДАЧА 1: функция numDots', function(){
 
 	it('дает 0 для пустой строки',function(){
 		const numDots = require('../L05-01.js');
-		assert.strictEqual(numDots(""), 0 , "не 0 на пустой строке");		
+		assert.strictEqual(numDots(""), 0 , "неверно для пустой строки");		
 	});
 
 	it('дает 0 для строки без точек',function(){
 		const numDots = require('../L05-01.js');
-		assert.strictEqual(numDots("f*jf"), 0 , "не 0 для строки без точек");		
+		assert.strictEqual(numDots("hgeri;ghgh"), 0 , "не 0 для строки без точек");		
 	});
 
 	it('дает 4 для строки, состоящей из точек',function(){
