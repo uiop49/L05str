@@ -16,22 +16,22 @@ describe('ЗАДАЧА 2: функция ph2f', function(){
 
 	it('дает верный ответ для строки с 2 вхождениями ph', function(){
            const ph2f = require('../L05-02.js');
-           assert.strictEqual(ph2f("photographer"), "fotografer", "неверно для 'photographer'");
+           assert(ph2f("photographer"), "fotografer", "неверно для 'photographer'");
     });
 
 	it('дает верный ответ для пустой строки', function(){
            const ph2f = require('../L05-02.js');
-           assert.strictEqual(ph2f(''), '', "неверно для ''");
+           assert(ph2f('') == '', "неверно для ''");
     });
 
-	it('дает верный ответ для ph, function()', function(){
+	it('дает верный ответ для ph', function(){
            const ph2f = require('../L05-02.js');
-           assert.strictEqual(ph2f("ph"), "f", "неверно для 'ph'");
+           assert(ph2f("ph"), "f", "неверно для 'ph'");
     });
 
 	it('дает верный ответ для нескольких подряд идущих phphph', function(){
            const ph2f = require('../L05-02.js');
-           assert.strictEqual(ph2f("phphph"), "fff", "неверно для 'phphph'");
+           assert(ph2f("phphph"), "fff", "неверно для 'phphph'");
     });
 
 
