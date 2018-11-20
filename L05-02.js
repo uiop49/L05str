@@ -1,11 +1,13 @@
 function ph2f(s){
-	var ph = 0
+	var ph = '';
 	for (var i=0; i<s.length; i++){
-		if (s[i]=="ph"){
-			s[i]=="f"
-			ph++;
-	}
+		if (s[i]=='p' && s[i+1]=='h'){
+            ph += 'f'
+			i++;
+	} else {
+        ph += s[i];
+    }
 } 
 	return ph;
 } 
-module.exports = numDots;
+module.exports = ph2f;
