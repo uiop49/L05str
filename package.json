@@ -20,5 +20,6 @@
     "строки"
   ],
   "author": "А.В.Павлов",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {}
 }
