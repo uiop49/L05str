@@ -15,23 +15,23 @@ describe('ЗАДАЧА 1: функция numDots', function(){
 	});
 
 	it('дает 2 для строки с 2 точками', function(){
-           const numDots = require('../L05-01.js').default;
-		   assert.strictEqual(numDots(".*."), 2, "неверно для '.*.'");
-        });
+           const numDots = require('../L05-01.js');
+           assert.strictEqual(numDots("h.*.j"), 2, "неверно для '.*.'");
+    });
 
-	it ('дает 0 для пустой строки',function(){
-			const numDots = require('../L05-01.js').default;
-			assert.strictEqual(numDots(""), 0, "неверно для ''");
+	it('дает 0 для пустой строки',function(){
+		const numDots = require('../L05-01.js');
+		assert.strictEqual(numDots(""), 0 , "не 0 на пустой строке");		
 	});
-	it ('дает 2 для строки из 2 точек',function(){
-		const numDots = require('../L05-01.js').default;
-		assert.strictEqual(numDots(".."), 2, "неверно для '..'");	
-    })
 
-	it ('дает 1 для строки составленной целиком из точек',function(){
-			const numDots = require('../L05-01.js').default;
-			assert.strictEqual(numDots("."), 1, "неверно для пустой строки");	
-	})
-	
+	it('дает 0 для строки без точек',function(){
+		const numDots = require('../L05-01.js');
+		assert.strictEqual(numDots("f*jf"), 0 , "не 0 для строки без точек");		
+	});
+
+	it('дает 4 для строки, состоящей из точек',function(){
+	const numDots = require('../L05-01.js');
+	assert.strictEqual(numDots("...."), 4 , "не 4 для строки из 4 точек");		
+	});
+
 });
- 
