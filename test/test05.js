@@ -1,1 +1,32 @@
- 
+ "use strict"                       
+
+const assert = require('assert');
+const fs = require('fs');
+
+describe('ЗАДАЧА 5: функция isDelResult', function(){
+	it('файл L05-05.js существует ', function(){
+		assert(fs.existsSync('L05-05.js'), "Файл L05-05.js не существует");
+	});
+
+	it('файл непуст', function(){
+		var stats = fs.statSync('L05-05.js');
+		var fileSize = stats["size"];
+		assert(fileSize > 24, "Файл пуст или слишком маленький");
+	});
+
+	it('дает истину для пары ALABAMA, ALMA', function(){
+		const isDelResult = require('../L05-05.js');
+		assert.strictEqual(isDelResult("ALABAMA", "ALMA"), true, "неверно для 'ALABAMA', 'ALMA'");
+	});
+
+	it('дает ложь для пары AZABAMA, ALMA', function(){
+		const isDelResult = require('../L05-05.js');
+		assert.strictEqual(isDelResult("AZABAMA", "ALMA"), false, "неверно для 'AZABAMA', 'ALMA'");
+	});
+
+	it('дает истину для пары ALABAMAHKSJDHKAJSDHNKAJSDHNUIAHOWQJEOQWKA, ALMQJQQA', function(){
+		const isDelResult = require('../L05-05.js');
+		assert.strictEqual(isDelResult("ALABAMA", "ALMA"), true, "неверно для 'ALABAMA', 'ALMA'");
+	});
+
+});
