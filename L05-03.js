@@ -1,27 +1,18 @@
-function longestWordLen(s){
-	var l = s.length ;
-	var q = 0 ;
-	var k = 0 ;
-	var c = 0 ;
-	for(i=0;i<l;i++){
-		if(s[i]!=" "){
-			q = q + 1 ;
-			if((s[i]==",")||(s[i]==".")){
-				q = q - 1 ;
-			}
-			c = q ;
+function longestWordLen(s) {
+var a = 0 ;
+var k = 0 ;
+var l = s.length ; 	
+	for (var i=0;i<l+1;i++) {
+		if (s[i]>='a'&&s[i]<='z'||s[i]>='A'&&s[i]<='Z'){
+			k++;
 		}
-		else{
-			if(q>k){
-				k = q ;
+		else {
+			if (a < k){ 
+				a = k;
 			}
-			q = 0 ;
+			k = 0;
 		}
 	}
-	if(k==0){
-		return c ;
-	}else{
-		return k ;
-	}
+	return a;
 }
-module.exports = longestWordLen ;	
+module.exports = longestWordLen;

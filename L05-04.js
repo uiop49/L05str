@@ -3,8 +3,7 @@ function isPalindrome(s){
 	var a = "" ;
 	var b = "" ;
 	for(var i=0;i<l;i++){
-		if((s[i]==" ")||(s[i]==",")||(s[i]==".")){
-		}else{
+		if(s[i]>='a'&&s[i]<='z'||s[i]>='A'&&s[i]<='Z'){
 			a = a + s[i] ;
 		}
 	}
