@@ -31,7 +31,7 @@ describe('ЗАДАЧА 2: функция ph2f', function(){
 
      it('дает верный ответ для пустой строки', function(){
            const ph2f = require('../L05-02.js');
-           assert(ph2f(""), "", "неверно для ''");
+           assert(ph2f(" "), "", "неверно для ''");
     });
 
 });
