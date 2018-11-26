@@ -16,21 +16,21 @@ describe('ЗАДАЧА 3: функция longestWordLen', function(){
 	});
 
 	it('Правильно находит длину 1 слова', function(){
-		assertStrictEqual(longestWordLen("Quick"), 5, "неверно для слова 'Quick'");
+		assert.strictEqual(longestWordLen("Quick"), 5, "неверно для слова 'Quick'");
 	});
 
 	it('Правильно находит макс длину слова в предложении1', function(){
-		assertStrictEqual(longestWordLen("Quicks brown fox jumps, and is gone."), 6,
+		assert.strictEqual(longestWordLen("Quicks brown fox jumps, and is gone."), 6,
 		 "неверно для предложения 'Quicks brown fox jumps, and is gone.'");
 	});
 
 	it('Правильно находит макс длину слова в предложении2', function(){
-		assertStrictEqual(longestWordLen("славянQuickess№ brown fox)Патриарх Кирилл, and)))is gone.."), 8,
+		assert.strictEqual(longestWordLen("славянQuickess№ brown fox)Патриарх Кирилл, and)))is gone.."), 8,
 		 "неверно для предложения 'славянQuickess№ brown fox)Патриарх Кирилл, and)))is gone..'");
 	});
 
 	it('Правильно находит макс длину слова в пустом предложении', function(){
-		assertStrictEqual(longestWordLen(""), 0, "неверно для ''");
+		assert.strictEqual(longestWordLen(""), 0, "неверно для ''");
 	});
 
 });
