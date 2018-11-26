@@ -16,17 +16,17 @@ describe('ЗАДАЧА 3: функция longestWordLen', function(){
 
 	it('Правильно находит длину 1 слова', function(){
 		const longestWordLen = require('../L05-03.js');
-		assert(longestWordLen("Quick")==5, "неверно для слова 'Quick'");
+		assert(longestWordLen("Quick"), 5, "неверно для слова 'Quick'");
 	});
 
 	it('Правильно находит длину пустой строки', function(){
 		const longestWordLen = require('../L05-03.js');
-		assert(longestWordLen("")==0, "неверно для пустой строки");
+		assert(longestWordLen(" "), 0, "неверно для пустой строки");
 	});
 
 	it('Правильно находит длину длинного предложения', function(){
 	const longestWordLen = require('../L05-03.js');
-	assert(longestWordLen("Quick brown fox jumps, and is gone")==5, "неверно для слова длинного предложения");
+	assert(longestWordLen("Quick brown fox jumps, and is gone"), 5, "неверно для слова длинного предложения");
 	});
 });
  
