@@ -33,7 +33,10 @@ describe('ЗАДАЧА 2: функция ph2f', function(){
            const ph2f = require('../L05-02.js');
            assert(ph2f("phphph"), "fff", "неверно для 'phphph'");
     });
-
-
+    
+    it('дает верный ответ для строки без ph', function() {
+    	const ph2f = require('../L05-02.js');
+    	assert(ph2f("perhviy igrock"), "perhviy igrock", "неверно для 'perhviy igrock'");
+    });
 
 }); 
