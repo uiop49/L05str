@@ -1,9 +1,20 @@
-function isPalindrome(s) {
-  s = s.replace(/\s+/g, '');
-  var len = Math.floor(s.length / 2);
-  for (var i = 0; i < len; i++)
-    if (s[i] !== s[s.length - i - 1])
-      return false;
-  return true;
+function isPalindrome(s){
+	var k = 0;
+    var d = '';
+    var t = true;
+    var f = false;
+	for (var i=0; i<s.length; i++){
+		if (s[i] != ' ')
+            d += s[i];
+    }
+    for (i = 0;i < d.length;i++){
+        if (d[i] == d[d.length-i-1])
+            k++
+    }
+        if (d.length == k){
+            return t;
+        }
+       
+    return f;
 }
 module.exports = isPalindrome;
