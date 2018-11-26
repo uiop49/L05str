@@ -7,7 +7,7 @@ function isDelResult(s1,s2) {
 			for(j=0; j<sl2; j++)
 				if (s1[i]==s2[j])
 					{l+=1; break;}
-	if (l==sl1)
+	if (l==sl1 || l==sl2)
 		return 'true';
 	else return 'false';
 }
