@@ -16,7 +16,7 @@ describe('ЗАДАЧА 4: функция isPalindrome', function(){
 
 	it('дает истину для одного палиндрома', function(){
 		const isPalindrome = require('../L05-04.js');
-		assert.strictEqual(isPalindrome("MADAM I AM ADAM"), true, "неверно для 'MADAM I AM ADAM'");
+		assert.strictEqual(isPalindrome("MADAM I M ADAM"), true, "неверно для 'MADAM I AM ADAM'");
 	});
 
 	it('дает ложь для одного непалиндрома', function(){
