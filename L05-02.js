@@ -1,14 +1,25 @@
-function ph2s(s)
+function ph2f(s)
 {
-	var d="";
+	var r="";
 	for (var i=0; i<s.length; i++)
 	{
-		if ((s[i] == "p") && (s[i+1] == "h"))
+		if (s[i] === "p")
 		{
-			s[i]="f";
 			i++;
+			if (s[i] === "h")
+			{
+				r+="f";
+			}
+			else
+			{
+				r+=s[i];
+			}
+		}
+		else
+		{
+			r+=s[i];
 		}
 	}
-	return s;
+	return r;
 }
-module.exports=ph2s;
+module.exports=ph2f;
