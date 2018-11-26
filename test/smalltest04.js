@@ -16,12 +16,12 @@ describe('ЗАДАЧА 4: функция isPalindrome', function(){
 
 	it('дает истину для одного палиндрома', function(){
 		const isPalindrome = require('../L05-04.js');
-		assertStrictEqual(isPalindrome("MADAM I AM ADAM"), true, "неверно для 'MADAM I AM ADAM'");
+		assert.strictEqual(isPalindrome("MADAM I M ADAM"), true, "неверно для 'MADAM I M ADAM'");
 	});
 
 	it('дает ложь для одного непалиндрома', function(){
 		const isPalindrome = require('../L05-04.js');
-		assertStrictEqual(isPalindrome("MADA"), false, "неверно для 'MADA'");
+		assert.strictEqual(isPalindrome("MADA"), false, "неверно для 'MADA'");
 	});
  
 });

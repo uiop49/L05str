@@ -18,5 +18,14 @@ describe('ЗАДАЧА 5: функция isDelResult', function(){
 		const isDelResult = require('../L05-05.js');
 		assert.strictEqual(isDelResult("ALABAMA", "ALMA"), true, "неверно для 'ALABAMA', 'ALMA'");
 	});
-
+    
+    it('дает истину для пары ALABAMA, ALMA', function(){
+		const isDelResult = require('../L05-05.js');
+		assert.strictEqual(isDelResult("ACOOLAMAMA", "ALMA"), true, "неверно для 'ACOOLAMAMA', 'ALMA'");
+	});
+    
+    it('дает истину для пары ALABAMA, ALMA', function(){
+		const isDelResult = require('../L05-05.js');
+		assert.strictEqual(isDelResult("AMON", "ALMA"), false, "неверно для 'AMON', 'ALMA'");
+	});
 });
