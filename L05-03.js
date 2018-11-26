@@ -1,4 +1,4 @@
-function longestWord(s) {
+function longestWordLen(s) {
 	var x = 0;
 	var m = 0;
 	for (var i = 0; i < s.length; i++) {
@@ -15,4 +15,4 @@ function longestWord(s) {
 	return m;
 }
 
-module.exports = longestWord;
+module.exports = longestWordLen;
