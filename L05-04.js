@@ -2,14 +2,14 @@ function isPalindrome(s){
 	s1 = "";
 	var i = 0;
 	while (s[i]!=undefined){
-		console.log(". "+s[i]);
+//		console.log(". "+s[i]);
 		if (isBukva(s[i])){
 			s1 += s[i];
-		console.log(". "+s[i]);
+//		console.log(". "+s[i]);
 		}
 	i++;
 	}
-	console.log(s1);
+//	console.log(s1);
 	return(s1==revercer(s1))
 }
 
